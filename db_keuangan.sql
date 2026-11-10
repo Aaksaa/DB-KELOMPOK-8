@@ -1,9 +1,9 @@
 
 
-CREATE DATABASE IF NOT EXISTS db_keuangan
+CREATE DATABASE IF NOT EXISTS praktikum_modul10
     CHARACTER SET utf8mb4
     COLLATE utf8mb4_unicode_ci;
-USE db_keuangan;
+USE praktikum_modul10;
 
 -- 1. PENGGUNA
 CREATE TABLE PENGGUNA (

@@ -1,8 +1,4 @@
-
-
--- =====================================================================
--- Tahap 5
--- =====================================================================
+use praktikum_modul10;
 -- 0.1 Perbarui statistik tabel (wajib setelah insert data besar)
 ANALYZE TABLE PENGGUNA, PELANGGAN, PEMASOK, PRODUK, KAS_REKENING,
               TRANSAKSI, BUKTI_TRANSAKSI, PEMBAYARAN,
@@ -62,29 +58,3 @@ SELECT id_transaksi, tanggal_transaksi, jenis_transaksi, status_validasi, total_
 FROM TRANSAKSI
 WHERE tanggal_transaksi >= '2026-01-01'
   AND tanggal_transaksi <  '2026-02-01';
-
--- =====================================================================
--- Tahap 6
--- =====================================================================
-
--- backup data sql
-mysqldump -u root -p --databases praktikum_modul10 > backup_modul10.sql
-
--- Restore data sql
-mysql -u root -p < backup_modul10.sql
-
--- Validasi Hasil Restore
-USE praktikum_modul10;
-SHOW TABLES;
-SELECT COUNT(*) FROM PENGGUNA; --10000
-SELECT COUNT(*) FROM PELANGGAN; --20000
-SELECT COUNT(*) FROM PEMASOK; --10000
-SELECT COUNT(*) FROM PRODUK; --10000
-SELECT COUNT(*) FROM KAS_REKENING; --10000
-SELECT COUNT(*) FROM TRANSAKSI; --2000000
-SELECT COUNT(*) FROM BUKTI_TRANSAKSI; --2000000
-SELECT COUNT(*) FROM PEMBAYARAN; --500000
-SELECT COUNT(*) FROM TRANSAKSI_KAS_PEMILIK; --500000
-SELECT COUNT(*) FROM DETAIL_PENJUALAN; --1000000
-SELECT COUNT(*) FROM DETAIL_PEMBELIAN; --1000000
-SELECT COUNT(*) FROM LAPORAN_KEUANGAN; --10000

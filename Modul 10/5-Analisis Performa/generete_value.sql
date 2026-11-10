@@ -15,7 +15,7 @@
 -- Nilai dibuat dengan rumus MOD (deterministik), jadi hasilnya sama
 -- setiap dijalankan dan semua foreign key dijamin valid.
 -- =====================================================================
-USE db_keuangan_test;
+USE praktikum_modul10;
 SET SQL_SAFE_UPDATES = 0;
 SET autocommit = 0;
 -- ---------------------------------------------------------------------
