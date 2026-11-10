@@ -1,3 +1,4 @@
+-- Mengetahui versi DBMS
 SELECT VERSION();
 -- mysql> SELECT VERSION();
 -- +-----------+
@@ -7,7 +8,7 @@ SELECT VERSION();
 -- +-----------+
 -- 1 row in set (0.00 sec)
 
-
+-- Mengetahui informasi vendor
 SELECT @@version_comment;
 -- mysql> SELECT @@version_comment;
 -- +------------------------------+
@@ -17,7 +18,7 @@ SELECT @@version_comment;
 -- +------------------------------+
 -- 1 row in set (0.00 sec)
 
-
+-- Melihat storage engine yang tersedia
 SHOW ENGINES;
 -- mysql> SHOW ENGINES;
 -- +--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
@@ -37,7 +38,7 @@ SHOW ENGINES;
 -- +--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
 -- 11 rows in set (0.01 sec)
 
-
+-- Melihat database yang tersedia
 SHOW DATABASES;
 -- mysql> SHOW DATABASES;
 -- +-----------------------+
