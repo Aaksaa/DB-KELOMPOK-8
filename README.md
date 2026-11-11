@@ -1,9 +1,9 @@
 Repository ini merupakan bagian dari tugas praktikum basis data pada kelompok 8 (Kelompok NixOS).
 
 Berikut nama contributornya:
-1. [bramantabgsss](github.com/bramantabgsss) / Bramanta Setya Bagaskara (264311009) 
-2. [EdgarRizki01](github.com/EdgarRizki01) / Edgar Rizki Putra Novarianto (264311013)
-3. [Aaksaa](github.com/Aaksaa) / Rifqi Adyasta Mahardika (264311029)
+1. [bramantabgsss](https://github.com/bramantabgsss) / Bramanta Setya Bagaskara (264311009)
+2. [EdgarRizki01](https://github.com/EdgarRizki01) / Edgar Rizki Putra Novarianto (264311013)
+3. [Aaksaa](https://github.com/Aaksaa) / Rifqi Adyasta Mahardika (264311029)
 
 # Modul 9: Redundansi dan Denormalisasi
 [Detail Tugas Modul 9](./Modul%209/README.md)
