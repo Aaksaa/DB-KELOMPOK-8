@@ -1,4 +1,8 @@
-UPDATE TRANSAKSI SET status_validasi = 'DIKOREKSI' WHERE id_transaksi = 2;
+UPDATE produk
+SET
+    nama_produk = 'Buku Tulis A5',
+    harga_satuan_baku = 6000.00
+WHERE id_produk = 1;
 
-UPDATE PENGGUNA SET id_pengguna = 10 WHERE id_pengguna = 2;
-SELECT id_transaksi, id_pengguna FROM TRANSAKSI WHERE id_transaksi = 2;
+SELECT * FROM produk
+WHERE id_produk = 1;
