@@ -35,7 +35,7 @@ FROM TRANSAKSI
 WHERE tanggal_transaksi >= '2023-01-01'
   AND tanggal_transaksi <  '2026-02-01';
 
--- (opsional, MySQL 8.0.18+) waktu eksekusi nyata
+-- waktu eksekusi nyata
 EXPLAIN ANALYZE
 SELECT id_transaksi, tanggal_transaksi, jenis_transaksi, status_validasi, total_nilai
 FROM TRANSAKSI
