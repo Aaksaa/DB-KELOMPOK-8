@@ -1,3 +1,8 @@
+<div data-importer="techs" align="center">
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=nix" height="100" alt=""  />
+</div>
+
 Repository ini merupakan bagian dari tugas praktikum basis data pada kelompok 8 (Kelompok NixOS).
 
 Berikut nama contributornya:
