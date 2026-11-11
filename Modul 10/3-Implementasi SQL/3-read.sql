@@ -1,5 +1,3 @@
-USE db_keuangan;
-
 SELECT * FROM produk;
 
 SELECT * FROM produk
