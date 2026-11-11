@@ -1,4 +1,4 @@
-USE db_keuangan;
+USE praktikum_modul10;
 
 -- 1. PENGGUNA
 INSERT INTO PENGGUNA
