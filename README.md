@@ -19,3 +19,7 @@ Melakukan query JOIN pada data, denormalisasi basis data serta melakukan pembukt
 [Detail Tugas Modul 10](./Modul%2010/README.md)
 
 Mengidentifikasi RDBMS dan versinya yang sedang digunakan, menjelaskan arsitektur sistem yang akan dirancang, melakukan implementasi DDL dan DML untuk operasi CRUD pada basis data, menguji integritas data serta melakukan analisis performa basis data yang telah dirancang.
+
+# Modul 11: Perkembangan DBMS dan Lingkup Penerapan Basis Data 
+[Detail Tugas Modul 11](./Modul%2011/README.md)
+
