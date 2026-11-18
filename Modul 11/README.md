@@ -20,5 +20,4 @@ Berisi kumpulan skrip query MySQL untuk pengerjaan modul, mencakup implementasi 
 [Detail](./assets)
 
 Menyimpan aset pendukung seperti tangkapan layar (*screenshot*) hasil eksekusi query dan gambar pendukung dokumentasi pengerjaan modul.
-Use code with caution.
-Apakah Anda ingin membuatkan file README.md terpisah di dalam masing-masing folder (dokumentasi, diagram, sql, assets) juga?
+
