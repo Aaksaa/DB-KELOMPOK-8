@@ -1,10 +1,10 @@
 Repository ini menjawab modul 11 mata kuliah Basis Data menggunakan DBMS MySQL.
 
 Berikut detailnya:
-# 1. Dokumentasi (Perbandingan DBMS)
+# 1. Dokumentasi
 [Detail](./dokumentasi)
 
-Berisi dokumen analisis dan perbandingan berbagai jenis Database Management System (DBMS), khususnya membandingkan MySQL (RDBMS) dengan pendekatan database lain beserta kelebihan, kekurangan, dan studi kasus penggunaannya.
+Berisi dokumen analisis dan perbandingan berbagai jenis Database Management System (DBMS), membandingkan MySQL (RDBMS) dengan pendekatan database lain beserta kelebihan, kekurangan, dan studi kasus penggunaannya serta menganalisis objek dan lingkup penerapannya.
 
 # 2. Diagram
 [Detail](./diagram)

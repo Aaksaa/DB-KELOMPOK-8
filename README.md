@@ -23,3 +23,4 @@ Mengidentifikasi RDBMS dan versinya yang sedang digunakan, menjelaskan arsitektu
 # Modul 11: Perkembangan DBMS dan Lingkup Penerapan Basis Data 
 [Detail Tugas Modul 11](./Modul%2011/README.md)
 
+Melakukan perbandingan terhadap beberapa RDBMS lain, implementasi data pada JSON dan implementasi data pada pemodelan berorientasi objek.
