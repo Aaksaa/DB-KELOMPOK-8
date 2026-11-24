@@ -24,3 +24,8 @@ Mengidentifikasi RDBMS dan versinya yang sedang digunakan, menjelaskan arsitektu
 [Detail Tugas Modul 11](./Modul%2011/README.md)
 
 Melakukan perbandingan terhadap beberapa RDBMS lain, implementasi data pada JSON dan implementasi data pada pemodelan berorientasi objek.
+
+# Modul 12: Optimasi Query dan Kontrol Akses Basis Data
+[Detail Tugas Modul 12](./Modul%2012/README.md)
+
+Melakukan migrasi data, eksekusi query kompleks pada domain transportasi, implementasi dan pengujian DCL (*Data Control Language*) untuk manajemen hak akses, serta melakukan analisis performa melalui *query cost* dan visualisasi *query tree*.
