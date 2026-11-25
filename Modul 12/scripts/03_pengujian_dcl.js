@@ -10,8 +10,7 @@ db.createUser({
 // 3. Inspeksi hak akses (Setara dengan SHOW GRANTS pada MySQL/MariaDB)
 db.getUser("report_user");
 
-// 4. REVOKE hak baca (Mencabut hak akses)
-// Di MongoDB, kita mengupdate user untuk mengubah atau mengosongkan role-nya
-db.updateUser("report_user", {
-  roles: [] // Mengosongkan array roles berarti mencabut semua hak akses
-});
+// 4. REVOKE hak baca (Mencabut hak akses spesifik)
+db.revokeRolesFromUser("report_user", [
+  { role: "read", db: "praktikum_modul12" }
+]);
