@@ -1,0 +1,207 @@
+{
+  explainVersion: '1',
+  stages: [
+    {
+      '$cursor': {
+        queryPlanner: {
+          namespace: 'praktikum_modul12.transaksi',
+          parsedQuery: {
+            '$and': [
+              {
+                jenis_transaksi: {
+                  '$eq': 'PENJUALAN'
+                }
+              },
+              {
+                waktu_transaksi: {
+                  '$gte': ISODate('2026-09-30T17:00:00.000Z')
+                }
+              }
+            ]
+          },
+          indexFilterSet: false,
+          planCacheShapeHash: '69481855',
+          planCacheKey: '3A269D3E',
+          optimizationTimeMillis: 0,
+          maxIndexedOrSolutionsReached: false,
+          maxIndexedAndSolutionsReached: false,
+          maxScansToExplodeReached: false,
+          prunedSimilarIndexes: false,
+          winningPlan: {
+            isCached: false,
+            stage: 'PROJECTION_SIMPLE',
+            transformBy: {
+              _id: 1,
+              waktu_transaksi: 1
+            },
+            inputStage: {
+              stage: 'COLLSCAN',
+              filter: {
+                '$and': [
+                  {
+                    jenis_transaksi: {
+                      '$eq': 'PENJUALAN'
+                    }
+                  },
+                  {
+                    waktu_transaksi: {
+                      '$gte': ISODate('2026-09-30T17:00:00.000Z')
+                    }
+                  }
+                ]
+              },
+              direction: 'forward'
+            }
+          },
+          rejectedPlans: []
+        },
+        executionStats: {
+          executionSuccess: true,
+          nReturned: 3,
+          executionTimeMillis: 0,
+          totalKeysExamined: 0,
+          totalDocsExamined: 5,
+          executionStages: {
+            isCached: false,
+            stage: 'PROJECTION_SIMPLE',
+            nReturned: 3,
+            executionTimeMillisEstimate: 0,
+            works: 6,
+            advanced: 3,
+            needTime: 2,
+            needYield: 0,
+            saveState: 1,
+            restoreState: 1,
+            isEOF: 1,
+            transformBy: {
+              _id: 1,
+              waktu_transaksi: 1
+            },
+            inputStage: {
+              stage: 'COLLSCAN',
+              filter: {
+                '$and': [
+                  {
+                    jenis_transaksi: {
+                      '$eq': 'PENJUALAN'
+                    }
+                  },
+                  {
+                    waktu_transaksi: {
+                      '$gte': ISODate('2026-09-30T17:00:00.000Z')
+                    }
+                  }
+                ]
+              },
+              nReturned: 3,
+              executionTimeMillisEstimate: 0,
+              works: 6,
+              advanced: 3,
+              needTime: 2,
+              needYield: 0,
+              saveState: 1,
+              restoreState: 1,
+              isEOF: 1,
+              direction: 'forward',
+              docsExamined: 5
+            }
+          }
+        }
+      },
+      nReturned: Long('3'),
+      executionTimeMillisEstimate: Long('1')
+    },
+    {
+      '$lookup': {
+        from: 'detail_penjualan',
+        as: 'detail_penjualan',
+        localField: '_id',
+        foreignField: 'id_transaksi',
+        unwinding: {
+          preserveNullAndEmptyArrays: false
+        }
+      },
+      totalDocsExamined: Long('5'),
+      totalKeysExamined: Long('5'),
+      collectionScans: Long('0'),
+      indexesUsed: [
+        'id_transaksi_1'
+      ],
+      nReturned: Long('5'),
+      executionTimeMillisEstimate: Long('1')
+    },
+    {
+      '$project': {
+        _id: true,
+        waktu_transaksi: true,
+        detail_penjualan: {
+          no_item: true,
+          id_produk: true,
+          jumlah: true,
+          subtotal: true
+        }
+      },
+      nReturned: Long('5'),
+      executionTimeMillisEstimate: Long('1')
+    }
+  ],
+  queryShapeHash: '8134382E8D0A94FAF1798206CFEEBFF40032A002455C361247A837C999AFD048',
+  serverInfo: {
+    host: 'LAPTOP-9BIQAQVN',
+    port: 27017,
+    version: '8.0.4',
+    gitVersion: 'bc35ab4305d9920d9d0491c1c9ef9b72383d31f9'
+  },
+  serverParameters: {
+    internalQueryFacetBufferSizeBytes: 104857600,
+    internalQueryFacetMaxOutputDocSizeBytes: 104857600,
+    internalLookupStageIntermediateDocumentMaxSizeBytes: 104857600,
+    internalDocumentSourceGroupMaxMemoryBytes: 104857600,
+    internalQueryMaxBlockingSortMemoryUsageBytes: 104857600,
+    internalQueryProhibitBlockingMergeOnMongoS: 0,
+    internalQueryMaxAddToSetBytes: 104857600,
+    internalDocumentSourceSetWindowFieldsMaxMemoryBytes: 104857600,
+    internalQueryFrameworkControl: 'trySbeRestricted',
+    internalQueryPlannerIgnoreIndexWithCollationForRegex: 1
+  },
+  command: {
+    aggregate: 'transaksi',
+    pipeline: [
+      {
+        '$match': {
+          jenis_transaksi: 'PENJUALAN',
+          waktu_transaksi: {
+            '$gte': ISODate('2026-09-30T17:00:00.000Z')
+          }
+        }
+      },
+      {
+        '$lookup': {
+          from: 'detail_penjualan',
+          localField: '_id',
+          foreignField: 'id_transaksi',
+          as: 'detail_penjualan'
+        }
+      },
+      {
+        '$unwind': '$detail_penjualan'
+      },
+      {
+        '$project': {
+          _id: 1,
+          waktu_transaksi: 1,
+          'detail_penjualan.no_item': 1,
+          'detail_penjualan.id_produk': 1,
+          'detail_penjualan.jumlah': 1,
+          'detail_penjualan.subtotal': 1
+        }
+      }
+    ],
+    hint: {
+      '$natural': 1
+    },
+    cursor: {},
+    '$db': 'praktikum_modul12'
+  },
+  ok: 1
+}
